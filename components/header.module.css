@@ -1,0 +1,14 @@
+.navbar {
+    background-color: transparent;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex: 1 1 auto;
+    gap: 3em;
+    padding: 1.5% 2%;
+    z-index: 100;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
