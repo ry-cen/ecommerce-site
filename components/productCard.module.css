@@ -1,0 +1,31 @@
+.flex_container {
+
+}
+
+
+
+.card {
+    position:relative;
+    border-radius: 5%;
+    box-shadow: 3px 3px 3px 3px #0000008c;
+    width: 30rem;
+    height: 30rem;
+    overflow:hidden;
+
+    
+}
+
+.name {
+    position: absolute;
+    margin: 1rem;
+    top: 75%;
+    font-size: 2rem;
+    z-index: 10;
+}
+
+.image {
+    position: absolute;
+    top:0;
+    width:100%;
+    height:50%
+}
