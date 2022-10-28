@@ -12,18 +12,19 @@ interface Props {
 
 const ProductCard: FC<Props> = (props) => {
     return (
-        <div>
-            <Link href={'/product/' + props.pid}>
-                <div className={styles.card}>
-                    <div className={styles.image}>
-                        <Image  alt='' layout='fill' src={props.imagesrc}></Image>
-                    </div>
-                    <span className={styles.name}>
-                        {props.name}
-                    </span>
+        <Link href={'/product/' + props.pid}>
+            <div className={styles.card}>
+                <div className={styles.image}>
+                    <Image  alt='' layout='fill' src={props.imagesrc}></Image>
                 </div>
-            </Link>
-        </div>
+                <span className={styles.name}>
+                    <b>{props.name}</b>
+                </span>
+                <span className={styles.price}>
+                    <b>{'$' + props.price}</b>
+                </span>
+            </div>
+        </Link>
 	);
 }
 
