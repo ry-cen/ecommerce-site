@@ -2,17 +2,19 @@
 
 }
 
-
-
 .card {
     position:relative;
     border-radius: 5%;
     box-shadow: 3px 3px 3px 3px #0000008c;
-    width: 30rem;
+    width: 27rem;
     height: 30rem;
     overflow:hidden;
+    transition: 0.3s ease;
+}
 
-    
+.card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .name {
