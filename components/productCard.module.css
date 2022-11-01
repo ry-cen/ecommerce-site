@@ -32,6 +32,7 @@
     overflow: hidden;
     position: relative;
     margin:auto;
-    width:15rem;
+    margin-top: 3%;
+    width:17rem;
     height:15rem;
 }

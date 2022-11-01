@@ -11,6 +11,8 @@ interface Props {
 }
 
 const ProductCard: FC<Props> = (props) => {
+
+
     return (
         <Link href={'/product/' + props.pid}>
             <div className={styles.card}>
