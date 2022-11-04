@@ -16,7 +16,7 @@ const Header = () => {
         <div className={styles.navbar}>
 			<span><Link href="/">Home</Link></span>
             <span className={styles.spacer}></span>
-            <span>Cart {cart.cartItems.length > 0 && (<span>{cart.cartItems.reduce((a: any, c: any) => a + c.quantity, 0)}</span>)}</span>
+            <span><Link href="/cart">Cart </Link>{cart.cartItems.length > 0 && (<span>{cart.cartItems.reduce((a: any, c: any) => a + c.quantity, 0)}</span>)}</span>
             <span>
                 {status === 'loading' ? ('Loading')
                 : 

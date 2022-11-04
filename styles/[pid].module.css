@@ -1,0 +1,8 @@
+.image {
+  overflow: hidden;
+  position: relative;
+  margin:auto;
+  margin-top: 3%;
+  width:17rem;
+  height:15rem;
+}

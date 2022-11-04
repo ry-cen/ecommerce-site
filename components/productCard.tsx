@@ -3,27 +3,25 @@ import Image from 'next/image';
 import styles from './productCard.module.css';
 import Link from 'next/link';
 
-interface Props {
-    name: string,
-    price: number,
-    imagesrc: string,
-    pid: string,
+type Props = {
+    product: any,
 }
 
 const ProductCard: FC<Props> = (props) => {
 
+    const { product } = props;
 
     return (
-        <Link href={'/product/' + props.pid}>
+        <Link href={'/product/' + product.pid}>
             <div className={styles.card}>
                 <div className={styles.image}>
-                    <Image  alt='' layout='fill' src={props.imagesrc}></Image>
+                    <Image  alt='' layout='fill' src={product.image}></Image>
                 </div>
                 <span className={styles.name}>
-                    <b>{props.name}</b>
+                    <b>{product.name}</b>
                 </span>
                 <span className={styles.price}>
-                    <b>{'$' + props.price}</b>
+                    <b>{'$' + product.price}</b>
                 </span>
             </div>
         </Link>

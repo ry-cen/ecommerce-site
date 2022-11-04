@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-interface User {
+type User = {
   name: string;
   email: string;
   password: string;
