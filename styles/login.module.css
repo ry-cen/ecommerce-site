@@ -16,3 +16,8 @@
   width: fit-content;
   margin: auto;
 }
+
+.errorText {
+  font-size: 0.875rem;
+  color: red;
+}

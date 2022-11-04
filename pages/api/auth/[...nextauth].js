@@ -1,6 +1,6 @@
 import NextAuth from "next-auth";
 import bcryptjs from "bcryptjs";
-import { CredentialsProvider } from "next-auth/providers";
+import CredentialsProvider from "next-auth/providers/credentials";
 import User from "../../../models/user";
 import db from "../../../utils/db";
 
@@ -22,6 +22,7 @@ export default NextAuth({
     }
   },
   providers: [
+    
     CredentialsProvider({
       async authorize(credentials) {
         await db.connect();
