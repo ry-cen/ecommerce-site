@@ -1,0 +1,51 @@
+.title {
+  margin-bottom: 4rem;
+}
+
+.cartGrid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.cartItems {
+  overflow-x: auto;
+  grid-column: span 3 / span 3;
+}
+
+.table {
+  border-collapse: collapse;
+}
+
+.tableRow {
+  border-bottom: 1px solid white;
+  justify-items: center;
+}
+
+.tableRow td{
+  text-align: right;
+}
+
+
+.tableRow:first-child{
+  text-align: left;
+}
+
+.tableRow th + th {
+  text-align: right;
+}
+
+.flexContainer {
+  width: 100%;
+  display:flex;
+  align-items: center;
+}
+
+
+.tableCell {
+  padding: 1.25rem;
+}
+
+.table {
+  min-width: 100%;
+}

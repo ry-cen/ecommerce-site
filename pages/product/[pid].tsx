@@ -21,9 +21,14 @@ const ProductScreen = ({ product }: any) => {
 	const addToCartHandler = () => {
 		const existItem = state.cart.cartItems.find((x: any) => x.pid === product.pid);
 		const quantity = existItem ? existItem.quantity + 1 : 1
+
+		if (product.countInStock < quantity) {
+			alert('Product is out of stock.');
+			return;
+		}
 		
 		dispatch({type: 'CART_ADD_ITEM', payload: {...product, quantity: quantity}});
-		console.log(quantity)
+		console.log(state.cart.cartItems)
 	}
 
 	return (

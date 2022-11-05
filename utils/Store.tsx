@@ -14,17 +14,26 @@ const initialState = {
 
 function reducer(state: any, action: any) {
   switch(action.type) {
+
     case 'CART_ADD_ITEM': {
       const newItem = action.payload;
       const existItem = state.cart.cartItems.find(
-        (item: any) => item.id === newItem.id
+        (item: any) => item.pid === newItem.pid
         );
 
       const cartItems = existItem ? state.cart.cartItems.map(
-        (item: any) => item.name === existItem.name ? newItem : item) :
-        [...state.cart.cartItems, newItem]
+        (item: any) => item.pid === existItem.pid ? newItem : item) :
+        [...state.cart.cartItems, newItem];
 
-      return {...state, cart: {...state.cart, cartItems}}
+      return {...state, cart: {...state.cart, cartItems: cartItems}}
+    }
+
+    case 'CART_REMOVE_ITEM': {
+      const cartItems = state.cart.cartItems.filter(
+        (item: any) => item.pid !== action.payload.pid
+      );
+
+      return { ...state, cart: { ...state.cart, cartItems }};
     }
 
     default:
