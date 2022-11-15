@@ -4,8 +4,9 @@ import { Store } from '../utils/Store'
 import styles from '../styles/cart.module.css'
 import Link from 'next/link';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 
-export default function CartScreen() {
+function CartScreen() {
   const { state, dispatch } = useContext(Store);
 
   const {
@@ -74,3 +75,5 @@ export default function CartScreen() {
     </Layout>
   )
 }
+
+export default dynamic(() => Promise.resolve(CartScreen), {ssr:false});
