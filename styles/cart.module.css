@@ -1,3 +1,14 @@
+.listNone {
+  list-style: none;
+  display: inline-block;
+  text-align: left;
+  padding: 0;
+}
+
+.listNone > li {
+  margin-bottom: 1.25rem;
+}
+
 .title {
   margin-bottom: 4rem;
 }
@@ -48,4 +59,25 @@
 
 .table {
   min-width: 100%;
+}
+
+.subtotal {
+  font-size: 2rem;
+}
+
+.card {
+  text-align: center;
+  box-shadow: 3px 3px 3px 3px #0000008c;
+  width: 100%;
+  height: fit-content;
+}
+
+.checkoutButton {
+  color: black;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(255, 208, 0);
+  font-size: 1.5rem;
+  width: 100%;
+  height: 3rem;
 }

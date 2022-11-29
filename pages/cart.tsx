@@ -61,12 +61,19 @@ function CartScreen() {
                 ))}
               </tbody>
             </table>
-            <div>
-              <ul>
-                <li><div>Subtotal ({cartItems.reduce((a: number, c: any) => a + c.quantity, 0)}) : $
-                {cartItems.reduce((a: number, c: any) => a + c.quantity * c.price, 0)}</div></li>
-              </ul>
-            </div>
+          </div>
+          <div className={styles.card}>
+            <ul className={styles.listNone}>
+              <li>
+                <div className={styles.subtotal}>
+                  Subtotal ({cartItems.reduce((a: number, c: any) => a + c.quantity, 0)}) : $
+                  {cartItems.reduce((a: number, c: any) => a + c.quantity * c.price, 0)}
+                </div>
+              </li>
+              <li>
+                <button className={styles.checkoutButton}>Check Out</button>
+              </li>
+            </ul>
           </div>
         </div>
       )
